@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLiThuCungModelStoreContainer" CdmEntityContainer="QuanLiThuCungEntities2">
+    <EntitySetMapping Name="ChamSocHoThuCungs">
+      <EntityTypeMapping TypeName="QuanLiThuCungModel.ChamSocHoThuCung">
+        <MappingFragment StoreEntitySet="ChamSocHoThuCung">
+          <ScalarProperty Name="MaDon" ColumnName="MaDon" />
+          <ScalarProperty Name="TenThuCung" ColumnName="TenThuCung" />
+          <ScalarProperty Name="ChungLoai" ColumnName="ChungLoai" />
+          <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+          <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="SoNgay" ColumnName="SoNgay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChuaBenhThuCungs">
+      <EntityTypeMapping TypeName="QuanLiThuCungModel.ChuaBenhThuCung">
+        <MappingFragment StoreEntitySet="ChuaBenhThuCung">
+          <ScalarProperty Name="MaDon" ColumnName="MaDon" />
+          <ScalarProperty Name="TenThuCung" ColumnName="TenThuCung" />
+          <ScalarProperty Name="ChungLoai" ColumnName="ChungLoai" />
+          <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+          <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="PhiDieuTri" ColumnName="PhiDieuTri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

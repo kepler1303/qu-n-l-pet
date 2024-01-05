@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLiThuCungModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLiThuCung.dbo.ChamSocHoThuCung' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChamSocHoThuCung">
+    <Key>
+      <PropertyRef Name="MaDon" />
+      <PropertyRef Name="TenThuCung" />
+      <PropertyRef Name="ChungLoai" />
+      <PropertyRef Name="CanNang" />
+      <PropertyRef Name="NgayNhan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="SoNgay" />
+    </Key>
+    <Property Name="MaDon" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenThuCung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChungLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CanNang" Type="int" Nullable="false" />
+    <Property Name="NgayNhan" Type="datetime" Nullable="false" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="SoNgay" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLiThuCung.dbo.ChuaBenhThuCung' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChuaBenhThuCung">
+    <Key>
+      <PropertyRef Name="MaDon" />
+      <PropertyRef Name="TenThuCung" />
+      <PropertyRef Name="ChungLoai" />
+      <PropertyRef Name="CanNang" />
+      <PropertyRef Name="NgayNhan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="PhiDieuTri" />
+    </Key>
+    <Property Name="MaDon" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenThuCung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChungLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CanNang" Type="int" Nullable="false" />
+    <Property Name="NgayNhan" Type="datetime" Nullable="false" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="PhiDieuTri" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QuanLiThuCungModelStoreContainer">
+    <EntitySet Name="ChamSocHoThuCung" EntityType="Self.ChamSocHoThuCung" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChamSocHoThuCung].[MaDon] AS [MaDon], 
+    [ChamSocHoThuCung].[TenThuCung] AS [TenThuCung], 
+    [ChamSocHoThuCung].[ChungLoai] AS [ChungLoai], 
+    [ChamSocHoThuCung].[CanNang] AS [CanNang], 
+    [ChamSocHoThuCung].[NgayNhan] AS [NgayNhan], 
+    [ChamSocHoThuCung].[TinhTrang] AS [TinhTrang], 
+    [ChamSocHoThuCung].[SoNgay] AS [SoNgay]
+    FROM [dbo].[ChamSocHoThuCung] AS [ChamSocHoThuCung]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ChuaBenhThuCung" EntityType="Self.ChuaBenhThuCung" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChuaBenhThuCung].[MaDon] AS [MaDon], 
+    [ChuaBenhThuCung].[TenThuCung] AS [TenThuCung], 
+    [ChuaBenhThuCung].[ChungLoai] AS [ChungLoai], 
+    [ChuaBenhThuCung].[CanNang] AS [CanNang], 
+    [ChuaBenhThuCung].[NgayNhan] AS [NgayNhan], 
+    [ChuaBenhThuCung].[TinhTrang] AS [TinhTrang], 
+    [ChuaBenhThuCung].[PhiDieuTri] AS [PhiDieuTri]
+    FROM [dbo].[ChuaBenhThuCung] AS [ChuaBenhThuCung]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

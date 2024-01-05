@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLiThuCungModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChamSocHoThuCung">
+    <Key>
+      <PropertyRef Name="MaDon" />
+      <PropertyRef Name="TenThuCung" />
+      <PropertyRef Name="ChungLoai" />
+      <PropertyRef Name="CanNang" />
+      <PropertyRef Name="NgayNhan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="SoNgay" />
+    </Key>
+    <Property Name="MaDon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenThuCung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChungLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CanNang" Type="Int32" Nullable="false" />
+    <Property Name="NgayNhan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TinhTrang" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoNgay" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChuaBenhThuCung">
+    <Key>
+      <PropertyRef Name="MaDon" />
+      <PropertyRef Name="TenThuCung" />
+      <PropertyRef Name="ChungLoai" />
+      <PropertyRef Name="CanNang" />
+      <PropertyRef Name="NgayNhan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="PhiDieuTri" />
+    </Key>
+    <Property Name="MaDon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenThuCung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChungLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CanNang" Type="Int32" Nullable="false" />
+    <Property Name="NgayNhan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TinhTrang" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhiDieuTri" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QuanLiThuCungEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChamSocHoThuCungs" EntityType="Self.ChamSocHoThuCung" />
+    <EntitySet Name="ChuaBenhThuCungs" EntityType="Self.ChuaBenhThuCung" />
+  </EntityContainer>
+</Schema>
